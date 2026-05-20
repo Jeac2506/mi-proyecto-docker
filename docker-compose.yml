@@ -1,0 +1,78 @@
+version: '3.8'
+
+# Aquí definimos la red privada para que se comuniquen entre sí
+networks:
+  red-operativos:
+    driver: bridge
+
+# Aquí definimos el volumen para que la Base de Datos no se borre al apagar
+volumes:
+  datos_postgres:
+
+services:
+  # 1. SERVIDOR WEB (Nginx)
+  web-server:
+    image: nginx:alpine
+    container_name: mi_nginx
+    ports:
+      - "8080:80"
+    networks:
+      - red-operativos
+
+  # 2. SERVIDOR DE APLICACIONES (Node.js)
+  node-app:
+    image: node:18-alpine
+    container_name: mi_node
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=database
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+    command: >
+      sh -c "npm install -g nodemon && 
+             mkdir -p /app && cd /app && 
+             echo 'const express = require(\"express\"); const app = express(); app.get(\"/\", (req, res) => res.json({ mensaje: \"¡Hola desde Node.js bajo WSL2!\" })); app.listen(3000, () => console.log(\"Node activo\"));' > index.js && 
+             npm install express && 
+             nodemon index.js"
+    networks:
+      - red-operativos
+
+  # 3. BASE DE DATOS (PostgreSQL)
+  database:
+    image: postgres:15-alpine
+    container_name: mi_postgres
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - datos_postgres:/var/lib/postgresql/data
+    networks:
+      - red-operativos
+
+  # 4. ADMINISTRADOR DE BASE DE DATOS (pgAdmin 4)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: mi_pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@correo.com
+      - PGADMIN_DEFAULT_PASSWORD=admin_pass
+    ports:
+      - "5050:80"
+    networks:
+      - red-operativos
+
+  # 5. ENTORNO DE CIENCIA DE DATOS (Jupyter Lab)
+  jupyter:
+    image: jupyter/base-notebook
+    container_name: mi_jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN}
+    volumes:
+      - ./jupyter_notebooks:/home/jovyan/work
+    networks:
+      - red-operativos
