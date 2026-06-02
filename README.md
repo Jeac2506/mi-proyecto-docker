@@ -101,27 +101,6 @@ docker compose up -d
 
 ---
 
-## Evidencias
-
-### Nginx funcionando
-
-![Nginx](imagenes/nginx.png)
-
-### API Node.js
-
-![Node](imagenes/node-api.png)
-
-### pgAdmin
-
-![pgAdmin](imagenes/pgadmin.png)
-
-### Jupyter Lab
-
-![Jupyter](imagenes/jupyter.png)
-
-### Contenedores Activos
-
-![Docker](imagenes/docker-ps.png)
 
 ---
 
@@ -241,39 +220,6 @@ while True:
 
 ---
 
-## Evidencias
-
-### htop en reposo
-
-![htop](evidencias/htop_reposo.png)
-
-### Árbol de procesos
-
-![pstree](evidencias/pstree.png)
-
-### Saturación de CPU
-
-![cpu](evidencias/cpu_100.png)
-
-### Saturación de Memoria
-
-![memoria](evidencias/memoria.png)
-
-### PID de mayor consumo
-
-![pid](evidencias/pid_consumo.png)
-
-### Procesos compitiendo
-
-![procesos](evidencias/procesos_compitiendo.png)
-
-### Cambio de prioridad NI
-
-![nice](evidencias/nice.png)
-
-### Limitación con cpulimit
-
-![cpulimit](evidencias/cpulimit.png)
 
 ---
 
