@@ -4,8 +4,8 @@
 
 | Nombre Completo              | Código  | Correo Institucional                                                                      |
 | ---------------------------- | ------- | ----------------------------------------------------------------------------------------- |
-| Adriana Milena Noscue Dagua  | 2477336 | [adriana.noscue@correounivalle.edu.co](mailto:adriana.noscue@correounivalle.edu.co)       |
-| Sebastián Cucalón Astorquiza | 2477344 | [sebastian.cucalon@correounivalle.edu.co](mailto:sebastian.cucalon@correounivalle.edu.co) |
+| Juan Esteban Aguirre Castañeda | 2459676 | [juan.esteban.aguirre@correounivalle.edu.co](mailto:juan.esteban.aguirre@correounivalle.edu.co)       |
+
 
 ---
 
