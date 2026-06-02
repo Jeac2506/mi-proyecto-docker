@@ -99,24 +99,7 @@ docker compose up -d
 | pgAdmin 4   | 5050   |
 | Jupyter Lab | 8888   |
 
----
-## Evidencias
 
-<img width="921" height="491" alt="image" src="https://github.com/user-attachments/assets/499cb216-6060-4b09-bd96-fd7a6b75c187" />
-<img width="921" height="803" alt="image" src="https://github.com/user-attachments/assets/e40be6bb-1b08-4b33-9a41-891a70cda35c" />
-<img width="549" height="319" alt="image" src="https://github.com/user-attachments/assets/5c172493-c84f-46c6-972e-afb63568d48f" />
-<img width="582" height="88" alt="image" src="https://github.com/user-attachments/assets/0905b487-a2d0-4404-ac48-1ab7382e2727" />
-<img width="589" height="634" alt="image" src="https://github.com/user-attachments/assets/3f54409a-0c95-4ac5-9ca2-add9baac032d" />
-<img width="574" height="299" alt="image" src="https://github.com/user-attachments/assets/f24ef649-e518-4bd1-a78a-42cd780ecd9f" />
-<img width="450" height="299" alt="image" src="https://github.com/user-attachments/assets/4436ca5a-74b8-4631-a99a-255e8bac1709" />
-
-
-
-
-
-
-
----
 
 # Laboratorio 2 - Gestión y Optimización de Procesos en Linux
 
@@ -233,7 +216,15 @@ while True:
 ```
 
 ---
+## Evidencias
 
+<img width="921" height="491" alt="image" src="https://github.com/user-attachments/assets/499cb216-6060-4b09-bd96-fd7a6b75c187" />
+<img width="921" height="803" alt="image" src="https://github.com/user-attachments/assets/e40be6bb-1b08-4b33-9a41-891a70cda35c" />
+<img width="549" height="319" alt="image" src="https://github.com/user-attachments/assets/5c172493-c84f-46c6-972e-afb63568d48f" />
+<img width="582" height="88" alt="image" src="https://github.com/user-attachments/assets/0905b487-a2d0-4404-ac48-1ab7382e2727" />
+<img width="589" height="634" alt="image" src="https://github.com/user-attachments/assets/3f54409a-0c95-4ac5-9ca2-add9baac032d" />
+<img width="574" height="299" alt="image" src="https://github.com/user-attachments/assets/f24ef649-e518-4bd1-a78a-42cd780ecd9f" />
+<img width="450" height="299" alt="image" src="https://github.com/user-attachments/assets/4436ca5a-74b8-4631-a99a-255e8bac1709" />
 
 ---
 
